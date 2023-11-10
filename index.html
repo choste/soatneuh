@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <p>Hello World</p>
+  <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
+  </head>
+  <body class="flex">
+    <nav class="flex-none px-1">
+      <ul>
+        <li hx-get="/pages/page_1.html" hx-trigger="click" hx-target="#main" hx-swap="outerHTML">page 1</li>
+        <li hx-get="/pages/page_2.html" hx-trigger="click" hx-target="#main" hx-swap="outerHTML">page 2</li>
+      <ul>
+    </nav>
+    <main id="main" class="flex-auto border-purple-400 border">
+      <p>Hello World</p>
+    </main>
   </body>
 </html>
